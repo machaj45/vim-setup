@@ -1,3 +1,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/vim/vim.git
+[submodule "dotvim/plugged/YouCompleteMe"]
+	path = dotvim/plugged/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git

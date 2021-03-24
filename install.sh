@@ -9,6 +9,8 @@ git submodule update --init --recursive
 # Geting all necessary libs for vim build
 sudo apt-get --yes  install libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev universal-ctags python3 npm openjdk-11-jre-headless
 sudo snap install go --classic
+sudo npm install -g npm
+
 # Building Vim it selfe
 isVIM=(`vim --version | grep "Compiled by machy*" | wc -l`) 
 
@@ -34,6 +36,10 @@ ln -sr dotvim/* ~/.vim
 ln -sr vimrc ~/.vimrc 2> /dev/null
 
 vim +'PlugInstall --sync' +qa
+
+cd dotvim/plugged/YouCompleteMe/
+git submodule update --init --recursive
+cd ../../../
 
 ~/.vim/plugged/YouCompleteMe/install.py --all
 

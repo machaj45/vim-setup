@@ -14,6 +14,8 @@ let mapleader = ","
 syntax on
 filetype plugin on
 
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
 " Making vim so match better
 command WQ wq
 command Wq wq
